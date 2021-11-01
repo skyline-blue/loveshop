@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width,initial-scale=1,
+maximum-scale=1,user-scalable=no">
+    <title>管理员首页</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/index_admin.css">
+</head>
+
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <div class="banner-user-img col-xs-2"></div>
+            <div class="banner-username col-xs-4" v-text="username"></div>
+            <div class="banner-message-img col-xs-1 col-xs-push-4"></div>
+            <div class="banner-more col-xs-1 col-xs-push-4">+</div>
+        </div>
+    </div>
+
+
+    <div class="weather" id="weather">
+        <div class="weather-left">
+            <div class="weather-static">
+                <div class="weather-static-img"></div>
+                <div class="weather-text">今日天气</div>
+            </div>
+            <div class="weather-position">
+                {{weather_position}}
+            </div>
+        </div>
+        <div class="center weather-info-img"
+        :style=""></div>
+        <div class="weather-right">
+            <div class="weather-info-text">
+                {{weather_info_text}}
+            </div>
+            <div class="weather-degree">
+                {{weather_degree}}℃
+            </div>
+        </div>
+    </div>
+
+    <div class="workInfo container" id="workInfo">
+        <div class="row">
+            <div class="on-work-now work-left col-xs-6">
+                <div class="on-work-text">当前值班</div>
+                <div class="on-work-info">
+                    <ul>
+                        <li class="worker" v-for="worker in work_now">
+                            {{worker.aname}}({{worker.detail}})
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work-right col-xs-6">
+                <div class="work-income-today">
+                    <div class="income-text">今日收入</div>
+                    <div class="income-info">
+                        {{income_today}} RMB
+                    </div>
+                </div>
+                <div class="work-guest-today">
+                    <div class="guest-text">今日访客</div>
+                    <div class="guest-info">
+                        {{guest_today}} 人
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="log">
+        <div class="log_text">值班日志</div>
+        <textarea class="log_info"></textarea>
+    </div> -->
+
+    <div class="task" id="task">
+        <div class="task_text">近期任务</div>
+        <ol class="tasks">
+            <li class="task_info" v-for="task in tasks">
+                {{task.index}}. {{task.task_info}}----[{{task.time}}]
+            </li>
+        </ol>
+    </div>
+
+    <div class="container footer">
+        <div class="row">
+            <a href="./index_admin.html" class="footer-index col-xs-4">
+                <div class="img-index img"></div>
+                <div class="text-index">首页</div>
+            </a>
+            <a href="./workspace.html" class="footer-workspace col-xs-4">
+                <div class="img-workspace img"></div>
+                <div class="text-workspace">工作区</div>
+            </a>
+            <a href="./user_admin.html" class="footer-user col-xs-4">
+                <div class="img-user img"></div>
+                <div class="text-user">我</div>
+            </a>
+        </div>
+    </div>
+
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.1/qs.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/admin_index.js"></script>
+</body>
+
+</html>

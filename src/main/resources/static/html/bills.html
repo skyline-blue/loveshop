@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>账目</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bills.css">
+</head>
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <a href="./workspace.html" class="banner-close col-xs-1">×</a>
+            <div class="banner-text col-xs-11">账目</div>
+        </div>
+    </div>
+
+    <div class="bills-div">
+        <table class="table table-sm table-striped bill-table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">时间</th>
+                    <th scope="col">收银</th>
+                    <th scope="col">收入</th>
+                    <th scope="col">商品</th>
+                    <th scope="col">数量</th>
+                </tr>
+            </thead>
+            <tbody id="bill-lists">
+                <tr is="bill-list" 
+                v-for="bill in bills" 
+                :bill="bill"
+                :key="bill.id"></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/bills.js"></script>
+</body>
+</html>

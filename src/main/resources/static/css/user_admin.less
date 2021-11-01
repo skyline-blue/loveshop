@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 300px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 340px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 380px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    height: 2.4rem;
+    width: 100%;
+    background: #81D3F8;
+
+    .banner-user-img {
+        height: 2rem;
+        width: 2rem;
+        background-image: url("../img/user.png");
+        background-size: 1.8rem 1.8rem;
+        background-repeat: no-repeat;
+        margin: 0.3rem;
+    }
+
+    .banner-username {
+        line-height: 2.4rem;
+        font-size: 1.1rem;
+        color: white;
+        padding-left: 0.2rem;
+        font-style: italic;
+    }
+
+    .banner-message-img {
+        height: 1.4rem;
+        width: 1.4rem;
+        background-image: url("../img/message.png");
+        background-size: 1.4rem 1.4rem;
+        background-repeat: no-repeat;
+        margin: 0.5rem auto;
+    }
+
+    .banner-more {
+        line-height: 2.4rem;
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+.user-info {
+    width: 19.4rem;
+    height: 6rem;
+    margin: 0.8rem 0.3rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.8rem;
+
+    .user-name,
+    .phone {
+        height: 2rem;
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    .student-id,
+    .school {
+        height: 2rem;
+        border-bottom: 1px solid #cccccc;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    .department {
+        height: 2rem;
+        border-right: 1px solid #cccccc;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    .points {
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+}
+
+.footer {
+    position: absolute;
+    height: 2.6rem;
+    width: 100%;
+    background: #81D3F8;
+    bottom: 0;
+    overflow: hidden;
+
+    .img {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+
+    .img-index {
+        background-image: url("../img/index_inactive.png");
+    }
+
+    .img-workspace {
+        background-image: url("../img/workspace_inactive.png");
+    }
+
+    .img-user {
+        background-image: url("../img/user_active.png");
+    }
+
+    .text-index,
+    .text-workspace,
+    .text-user {
+        text-align: center;
+        font-size: 0.6rem;
+        color: black;
+    }
+
+    .text-user {
+        color: white;
+    }
+}

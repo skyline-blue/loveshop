@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加其他物品</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/addOthers.css">
+</head>
+
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <a href="./workspace.html" class="banner-close col-xs-1">×</a>
+            <div class="banner-text col-xs-11">添加其他物品</div>
+        </div>
+    </div>
+
+    <div class="others-form" id="others-form">
+        <div class="input-group form-part">
+            <span class="input-group-addon">物品名</span>
+            <input type="text" v-model="name" class="form-control" name="name" id="name" placeholder="请输入物品名称">
+        </div>
+        <div class="input-group form-part">
+            <span class="input-group-addon">数量</span>
+            <input type="text" v-model="amount" class="form-control" name="amount" id="amount" placeholder="请输入数量">
+        </div>
+        <div class="input-group form-part">
+            <span class="input-group-addon">价格</span>
+            <input type="text" v-model="price" class="form-control" name="price" id="price" placeholder="请输入价格">
+        </div>
+
+        <button 
+        type="button" 
+        @click="submitOtherGoods" 
+        class="btn btn-outline-primary form-button">
+            添加
+        </button>
+    </div>
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.1/qs.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/addOthers.js"></script>
+</body>
+
+</html>

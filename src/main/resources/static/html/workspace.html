@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作区</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+</head>
+
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <div class="banner-user-img col-xs-2"></div>
+            <div class="banner-username col-xs-4" v-text="username"></div>
+            <div class="banner-message-img col-xs-1 col-xs-push-4"></div>
+            <div class="banner-more col-xs-1 col-xs-push-4">+</div>
+        </div>
+    </div>
+
+    <div class="on-work-app ">
+        <div class="on-work-app-text">值班应用</div>
+        <div class="on-work-apps container">
+            <div class="row">
+                <a href="./clockIn.html" class="app-check-in col-xs-4">
+                    <div class="check-in-img"></div>
+                    <div class="check-in-text">值班打卡</div>
+                </a>
+                <a href="./searchBook.html" class="app-search-book col-xs-4">
+                    <div class="search-book-img"></div>
+                    <div class="search-book-text">图书查询</div>
+                </a>
+                <a class="blank-up col-xs-4"></a>
+                <a href="./workTable.html" class="app-work-table col-xs-4">
+                    <div class="work-table-img"></div>
+                    <div class="work-table-text">值班表</div>
+                </a>
+                <a href="./searchOtherGoods.html" class="app-search-others col-xs-4">
+                    <div class="search-others-img"></div>
+                    <div class="search-others-text">其他商品查询</div>
+                </a>
+                <a class="blank-down col-xs-4"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="storage-manage-app">
+        <div class="storage-manage-text">库存管理</div>
+        <div class="storage-manage-apps container">
+            <div class="row">
+                <a href="./addBook.html" class="app-add-book col-xs-4">
+                    <div class="add-book-img"></div>
+                    <div class="add-book-text">添加图书</div>
+                </a>
+                <a href="./addOthers.html" class="app-add-others col-xs-4">
+                    <div class="add-others-img"></div>
+                    <div class="add-others-text">其他商品添加</div>
+                </a>
+                <a href="./sell.html" class="app-sell col-xs-4">
+                    <div class="sell-img"></div>
+                    <div class="sell-text">售出</div>
+                </a>
+                <a href="./findAllBooks.html" class="app-find-all-books col-xs-4">
+                    <div class="find-all-books-img"></div>
+                    <div class="find-all-books-text">所有图书</div>
+                </a>
+                <a href="./findAllOthers.html" class="app-find-all-others col-xs-4">
+                    <div class="find-all-others-img"></div>
+                    <div class="find-all-others-text">所有其他商品</div>
+                </a>
+                <a href="./bills.html" class="app-bills col-xs-4">
+                    <div class="bills-img"></div>
+                    <div class="bills-text">账目</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="other-app">
+        <div class="other-app-text">其他应用</div>
+        <div class="other-apps container">
+            <div class="row">
+                <a href="./connection.html" class="app-connection col-xs-4">
+                    <div class="connection-img"></div>
+                    <div class="connection-text">联系人</div>
+                </a>
+                <a href="" class="app-feedback col-xs-4">
+                    <div class="feedback-img"></div>
+                    <div class="feedback-text">BUG反馈</div>
+                </a>
+                <div class="blank-up col-xs-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer">
+        <div class="row">
+            <a href="./index_admin.html" class="footer-index col-xs-4">
+                <div class="img-index img"></div>
+                <div class="text-index">首页</div>
+            </a>
+            <a href="./workspace.html" class="footer-workspace col-xs-4">
+                <div class="img-workspace img"></div>
+                <div class="text-workspace">工作区</div>
+            </a>
+            <a href="./user_admin.html" class="footer-user col-xs-4">
+                <div class="img-user img"></div>
+                <div class="text-user">我</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/workspace.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 300px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 340px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 380px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    height: 2.4rem;
+    width: 100%;
+    background: #81D3F8;
+
+    .banner-user-img {
+        height: 2rem;
+        width: 2rem;
+        background-image: url("../img/user.png");
+        background-size: 1.8rem 1.8rem;
+        background-repeat: no-repeat;
+        margin: 0.3rem;
+    }
+
+    .banner-username {
+        line-height: 2.4rem;
+        font-size: 1.1rem;
+        color: white;
+        padding-left: 0.2rem;
+        font-style: italic;
+    }
+
+    .banner-message-img {
+        height: 1.4rem;
+        width: 1.4rem;
+        background-image: url("../img/message.png");
+        background-size: 1.4rem 1.4rem;
+        background-repeat: no-repeat;
+        margin: 0.5rem auto;
+    }
+
+    .banner-more {
+        line-height: 2.4rem;
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+.on-work-app {
+    width: 19.4rem;
+    height: 8rem;
+    margin: 0.8rem 0.3rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.8rem;
+
+    .on-work-app-text {
+        height: 1.8rem;
+        border-bottom: 1px solid #cccccc;
+        text-align: left;
+        padding-left: 1rem;
+        line-height: 1.8rem;
+        font-weight: 700;
+    }
+
+    .app-check-in {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+
+        .check-in-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/checkIn.png");
+        }
+
+        .check-in-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-search-book {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+
+        .search-book-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/searchBook.png");
+        }
+
+        .search-book-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .blank-up {
+        height: 3.1rem;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    .app-work-table {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+
+        .work-table-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/workTable.png");
+        }
+
+        .work-table-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-search-others {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;   
+
+        .search-others-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/searchOthers.png");
+        }
+
+        .search-others-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+}
+
+.storage-manage-app {
+    width: 19.4rem;
+    height: 8rem;
+    margin: 0.8rem 0.3rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.8rem;
+
+    .storage-manage-text {
+        height: 1.8rem;
+        border-bottom: 1px solid #cccccc;
+        text-align: left;
+        padding-left: 1rem;
+        line-height: 1.8rem;
+        font-weight: 700;
+    }
+
+    .app-add-book {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+
+        .add-book-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/addBook.png");
+        }
+
+        .add-book-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-add-others {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+
+        .add-others-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/searchOthers.png");
+        }
+
+        .add-others-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-sell {
+        height: 3.1rem;
+        border-bottom: 1px solid #cccccc;
+
+        .sell-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0rem auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/sell.png");
+        }
+
+        .sell-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-find-all-books {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+
+        .find-all-books-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0rem auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/allBooks.png");
+        }
+
+        .find-all-books-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-find-all-others {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+
+        .find-all-others-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0rem auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/allOthers.png");
+        }
+
+        .find-all-others-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-bills {
+        height: 3.1rem;
+
+        .bills-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0rem auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/bills.png");
+        }
+
+        .bills-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+}
+
+.other-app {
+    width: 19.4rem;
+    height: 8rem;
+    margin: 0.8rem 0.3rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.8rem;
+
+    .other-app-text {
+        height: 1.8rem;
+        border-bottom: 1px solid #cccccc;
+        text-align: left;
+        padding-left: 1rem;
+        line-height: 1.8rem;
+        font-weight: 700;
+    }
+
+    .app-connection {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+
+        .connection-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/connection.png");
+        }
+
+        .connection-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .app-feedback {
+        height: 3.1rem;
+        border-right: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+
+        .feedback-img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../img/feedback.png");
+        }
+
+        .feedback-text {
+            text-align: center;
+            line-height: 1.1rem;
+        }
+    }
+
+    .blank-up {
+        height: 3.1rem;
+        border-bottom: 1px solid #cccccc;
+    }
+}
+
+.footer {
+    position: absolute;
+    height: 2.6rem;
+    width: 100%;
+    background: #81D3F8;
+    bottom: 0;
+    overflow: hidden;
+
+    .img {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+
+    .img-index {
+        background-image: url("../img/index_inactive.png");
+    }
+
+    .img-workspace {
+        background-image: url("../img/workspace_active.png");
+    }
+
+    .img-user {
+        background-image: url("../img/user_inactive.png");
+    }
+
+    .text-index,
+    .text-workspace,
+    .text-user {
+        text-align: center;
+        font-size: 0.6rem;
+        color: black;
+    }
+
+    .text-workspace {
+        color: white;
+    }
+}

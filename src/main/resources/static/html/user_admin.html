@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/user_admin.css">
+</head>
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <div class="banner-user-img col-xs-2"></div>
+            <div class="banner-username col-xs-4" v-text="username"></div>
+            <div class="banner-message-img col-xs-1 col-xs-push-4"></div>
+            <div class="banner-more col-xs-1 col-xs-push-4">+</div>
+        </div>
+    </div>
+
+    <div class="container user-info" id="user-info">
+        <div class="row">
+            <div class="user-name col-xs-5">
+                {{username}}
+            </div>
+            <div class="student-id col-xs-7">
+                {{studentId}}
+            </div>
+            <div class="phone col-xs-5">
+                {{phone}}
+            </div>
+            <div class="school col-xs-7">
+                {{school}}
+            </div>
+            <div class="department col-xs-5">
+                {{department}}({{position}})
+            </div>
+            <div class="points col-xs-7">
+                积分: {{points}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer">
+        <div class="row">
+            <a href="./index_admin.html" class="footer-index col-xs-4">
+                <div class="img-index img"></div>
+                <div class="text-index">首页</div>
+            </a>
+            <a href="./workspace.html" class="footer-workspace col-xs-4">
+                <div class="img-workspace img"></div>
+                <div class="text-workspace">工作区</div>
+            </a>
+            <a href="./user_admin.html" class="footer-user col-xs-4">
+                <div class="img-user img"></div>
+                <div class="text-user">我</div>
+            </a>
+        </div>
+    </div>
+
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/user_admin.js"></script>
+</body>
+</html>

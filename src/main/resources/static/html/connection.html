@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系人</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/connection.css">
+</head>
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <a href="./workspace.html" class="banner-close col-xs-1">×</a>
+            <div class="banner-text col-xs-11">联系人</div>
+        </div>
+    </div>
+
+    <div class="connections-div ">
+        <table class="table table-sm table-striped connection-table" >
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">学院</th>
+                    <th scope="col">QQ</th>
+                    <th scope="col">电话</th>
+                </tr>
+            </thead>
+            <tbody id="connections">
+                <tr 
+                is="connection-list"
+                v-for="connection in connections"
+                :connection="connection"
+                :key="connection.aid"></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/connection.js"></script>
+</body>
+</html>

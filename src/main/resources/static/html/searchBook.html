@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书查询</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/searchBook.css">
+</head>
+
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <a href="./workspace.html" class="banner-close col-xs-1">×</a>
+            <div class="banner-text col-xs-11">图书查询</div>
+        </div>
+    </div>
+
+    <div class="search-div" id="search-div">
+        <div class="input-group search-input">
+            <input type="text" 
+            class="form-control" 
+            placeholder="输入ISBN/书名..."
+            v-model="searchInput">
+            <span class="input-group-btn">
+                <button 
+                class="btn btn-default" 
+                type="button"
+                @click="submitSearch"
+                >
+                查询
+            </button>
+            </span>
+        </div>
+
+        <div class="search-result">
+            <table class="table table-sm table-striped book-table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">书名</th>
+                        <th scope="col">数量</th>
+                        <th scope="col">价格</th>
+                        <th scope="col">作者</th>
+                        <th scope="col">位置</th>
+                    </tr>
+                </thead>
+                <tbody id="book-lists">
+                    <tr is="book-list" 
+                    v-for="book in books" 
+                    :book="book"
+                    :key="book.bid"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.1/qs.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/searchBook.js"></script>
+</body>
+
+</html>

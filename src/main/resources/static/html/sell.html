@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>售出</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/sell.css">
+</head>
+
+<body>
+    <div class="container banner" id="banner">
+        <div class="row">
+            <a href="./workspace.html" class="banner-close col-xs-1">×</a>
+            <div class="banner-text col-xs-11">售出商品</div>
+        </div>
+    </div>
+
+    <div class="sell-div container" id="sell-div">
+        <div class="row">
+            <div class="sell-book col-xs-6 {active: isBookActive}" 
+            id="sell-book" @click="showSellBook">图书出售</div>
+            <div class="sell-others col-xs-6 {active: isOthersActive}" 
+            id="sell-others" @click="showSellOthers">其他商品出售</div>
+        </div>
+
+        <div 
+        class="sell-book-input" 
+        id="sell-book-input" 
+        v-if="showSellBookInput">
+            <div class="input-group">
+                <span 
+                class="input-group-addon input-span" 
+                id="basic-addon1">ISBN</span>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="ISBN" 
+                aria-describedby="basic-addon1"
+                v-model="isbn">
+            </div>
+            <div class="input-group input-span">
+                <span 
+                class="input-group-addon" 
+                id="basic-addon3">数量</span>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="数量" 
+                aria-describedby="basic-addon3"
+                v-model="amount">
+            </div>
+            <button 
+            type="button" 
+            class="btn btn-default sell-button" 
+            id="sell-book-button"
+            @click="sellBook">出售</button>
+        </div>
+
+        <div 
+        class="sell-others-input" 
+        id="sell-others-input" 
+        v-if="showSellOthersInput">
+            <div class="input-group">
+                <span 
+                class="input-group-addon input-span" 
+                id="basic-addon2">商品名</span>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="商品名" 
+                aria-describedby="basic-addon2"
+                v-model="name">
+            </div>
+            <div class="input-group input-span">
+                <span 
+                class="input-group-addon" 
+                id="basic-addon4">数量</span>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="数量" 
+                aria-describedby="basic-addon4"
+                v-model="amount">
+            </div>
+            <button 
+            type="button" 
+            class="btn btn-default sell-button" 
+            id="sell-others-button"
+            @click="sellOthers">出售</button>
+        </div>
+    </div>
+
+    <script src="../lib/jquery-3.1.1.js"></script>
+    <script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.1/qs.js"></script>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="../js/sell.js"></script>
+</body>
+
+</html>
