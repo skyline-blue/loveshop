@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loveshop.mapper.OtherGoodsMapper">
+    <insert id="addNew" parameterType="OtherGoods">
+        insert into loveshop.t_othergoods(name, amount, price)
+        values (#{name}, #{amount}, #{price})
+    </insert>
+
+    <insert id="addExist" parameterType="OtherGoods">
+        update loveshop.t_othergoods
+        set amount = amount + #{amount}
+        where name = #{name}
+    </insert>
+
+    <update id="sell">
+        update loveshop.t_othergoods
+        set amount = amount - #{amount}
+        where name = #{name}
+    </update>
+
+    <update id="update" parameterType="OtherGoods">
+        update loveshop.t_othergoods
+        set name=#{name}, amount=#{amount}, price=#{price}
+        where id=#{id}
+    </update>
+
+    <select id="selectOtherGoodsByFullName" resultType="OtherGoods">
+        select * from loveshop.t_othergoods
+        where name = #{name}
+    </select>
+
+    <select id="selectOtherGoodsByName" resultType="OtherGoods">
+        select * from loveshop.t_othergoods
+        where name like concat('%', #{name}, '%')
+    </select>
+
+    <select id="selectAll" resultType="OtherGoods">
+        select * from loveshop.t_othergoods
+    </select>
+</mapper>

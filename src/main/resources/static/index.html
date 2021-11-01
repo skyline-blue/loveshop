@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="back"></div>
+
+    <div class="welcome-text">
+        欢迎来到爱小超~
+    </div>
+
+    <div class="input-box" id="input-box">
+        <div class="input-group input-studentId">
+            <span class="input-group-addon" id="basic-addon1">学号</span>
+            <input type="text" 
+            class="form-control" 
+            placeholder="请输入学号" 
+            aria-describedby="basic-addon1"
+            v-model="studentId"
+            >
+        </div>
+    
+        <div class="input-group input-password">
+            <span class="input-group-addon" id="basic-addon2">密码</span>
+            <input type="password" 
+            class="form-control" 
+            placeholder="请输入密码" 
+            aria-describedby="basic-addon2"
+            v-model="password">
+        </div>
+        
+        <button type="button" 
+        class="btn btn-default login-button"
+        @click="login">登录</button>
+    </div>
+
+    <script src="./lib/jquery-3.1.1.js"></script>
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./lib/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.10.1/qs.js"></script>
+    <script src="../lib/axios.js"></script>
+    <script src="../js/ipconfig.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

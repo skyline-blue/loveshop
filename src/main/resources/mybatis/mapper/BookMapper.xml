@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loveshop.mapper.BookMapper">
+    <insert id="addNew" parameterType="Book">
+        insert into loveshop.t_book(isbn, bookName, bookCount, bookPrice, author, location)
+        values (#{isbn}, #{bookName}, #{bookCount}, #{bookPrice}, #{author}, #{location})
+    </insert>
+
+    <insert id="addExist" parameterType="Book">
+        update loveshop.t_book
+        set bookCount = bookCount + #{bookCount}
+        where isbn = #{isbn}
+    </insert>
+
+    <update id="update" parameterType="Book">
+        update loveshop.t_book
+        set isbn=#{isbn}, bookName=#{bookName}, bookCount=#{bookCount}, bookPrice=#{bookPrice}, author=#{author}, location=#{location}
+        where bid=#{bid}
+    </update>
+
+    <update id="sell">
+        update loveshop.t_book
+        set bookCount = bookCount - #{amount}
+        where isbn = #{isbn}
+    </update>
+
+    <select id="selectBookByIsbn" resultType="Book">
+        select * from loveshop.t_book
+        where isbn = #{isbn}
+    </select>
+
+    <select id="selectBookByName" resultType="Book">
+        select * from loveshop.t_book
+        where bookName like concat('%', #{bookName}, '%')
+    </select>
+
+    <select id="selectAll" resultType="Book">
+        select * from loveshop.t_book
+    </select>
+</mapper>

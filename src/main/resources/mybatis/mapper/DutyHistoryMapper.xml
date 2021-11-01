@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loveshop.mapper.DutyHistoryMapper">
+
+    <insert id="add" parameterType="DutyHistory">
+        INSERT INTO loveshop.t_duty_history (aid, clockInTime)
+        VALUES (#{aid}, #{clockInTime})
+    </insert>
+
+    <select id="searchLatestDate" parameterType="int" resultType="string">
+        SELECT clockInTime
+        FROM loveshop.t_duty_history
+        WHERE aid = #{aid}
+        ORDER BY id DESC
+        LIMIT 0,1
+    </select>
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loveshop.mapper.BillMapper">
+
+    <insert id="add" parameterType="Bill">
+        insert into loveshop.t_bill(time, admin, money, goods, amount)
+        values (#{time}, #{admin}, #{money}, #{goods}, #{amount})
+    </insert>
+
+    <select id="selectAll" resultType="Bill">
+        select * from loveshop.t_bill;
+    </select>
+
+    <select id="getTodayTotalBill" resultType="double">
+        SELECT sum(money)
+        FROM loveshop.t_bill
+        WHERE time LIKE concat('%', #{dateToday}, '%')
+    </select>
+</mapper>

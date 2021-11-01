@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: root
+    password: 314159.com
+    url: jdbc:mysql://localhost:3306/loveshop?useUnicode=true&characterEncoding=utf-8&serverTimeZone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      maxActive: 20
+
+mybatis:
+  type-aliases-package: com.loveshop.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+server:
+  port: 8080
